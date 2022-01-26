@@ -8,6 +8,7 @@ django = "*"
 pillow = "*"
 mysqlclient = "==1.4.2.post1"
 pymysql = "*"
+django-embed-video = "*"
 
 [dev-packages]
 
