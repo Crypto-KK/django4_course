@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .serializers import SubjectSerializer
-from ..models import Subject
+from .serializers import SubjectSerializer, CourseSerializer
+from ..models import Subject, Course
 
 
 class SubjectListView(generics.ListAPIView):
@@ -11,3 +11,8 @@ class SubjectListView(generics.ListAPIView):
 class SubjectDetailView(generics.RetrieveAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
+
+
+class CourseListView(generics.ListAPIView):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
